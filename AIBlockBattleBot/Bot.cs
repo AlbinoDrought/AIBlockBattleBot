@@ -23,7 +23,7 @@ namespace AIBlockBattleBot
 
         public void Run()
         {
-            Console.SetIn(new StreamReader(Console.OpenStandardInput(8192)));
+            Console.SetIn(new StreamReader(Console.OpenStandardInput(512)));
             using (var parser = new Parser())
             {
                 EngineCommand command;

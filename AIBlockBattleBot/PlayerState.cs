@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using AIBlockBattleBot.Commands;
 
 namespace AIBlockBattleBot
@@ -7,6 +7,7 @@ namespace AIBlockBattleBot
     {
         public int RowsPoints { get; set; }
         public int Combo { get; set; }
+        public int Skips { get; set; }
         public Field Field { get; set; }
 
         public PlayerState(int fieldWidth, int fieldHeight)
@@ -25,6 +26,9 @@ namespace AIBlockBattleBot
                     break;
                 case "combo":
                     Combo = int.Parse(command.Value);
+                    break;
+                case "skips":
+                    Skips = int.Parse(command.Value);
                     break;
                 case "field":
                     Field.Parse(command.Value);
